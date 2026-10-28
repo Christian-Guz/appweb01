@@ -1,0 +1,115 @@
+/* Variables de Color y Tipografía */
+:root {
+  --bg-main: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border-color: #e2e8f0;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 8px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Base */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Redefinición del contenedor global */
+body > .container-fluid {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Navbar / Navegación */
+.navbar {
+  background-color: var(--surface-color) !important;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 0.85rem 1.5rem !important;
+  margin-bottom: 2.5rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.02em;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--accent-color) !important;
+  background-color: #f1f5f9;
+}
+
+.navbar-toggler {
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+/* Tarjeta del Contenido Principal (Bloque {% block content %}) */
+body > .container-fluid > .container-fluid {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 3rem 2.5rem !important;
+}
+
+/* Tipografía de Encabezados y Párrafos */
+h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Indicador sutil debajo del título */
+h1::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  margin-top: 0.4rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
