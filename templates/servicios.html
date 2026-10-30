@@ -4,5 +4,15 @@
 <div class="container-fluid">
     <h1>Servicios</h1>
     <p>Hola, {{mensaje}}</p>
+
+    <div class="card" style="width: 15rem;">
+        <img src="{{url_for('static', filename = 'img/Icono_dia_de_muertos.png')}}" class="card-img-top" alt="calabera">
+        <div class="card-body">
+            <h5 class="card-title">Calaveras decorativas</h5>
+            <p class="card-text">Ofrecemos calaveras decorativas junto con otros productos para la decoración de tu altar</p>
+            <a href="{{url_for('productos')}}" class="btn btn-primary">Productos</a>
+        </div>
+    </div>
+
 </div>
 {%endblock%}
